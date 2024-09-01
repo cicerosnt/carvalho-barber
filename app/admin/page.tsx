@@ -15,13 +15,18 @@ export const metadata: Metadata = {
 
 const BookingsPage = async () => {
   const session = await getServerSession(authOptions);
+  
+  const authorizedEmails = [
+    "cdsantos.snt@gmail.com",
+    "pedromendesv96@gmail.com"
+  ];
 
   if (!session?.user) {
     return redirect("/");
   }
   
-  if(session?.user?.email != "cdsantos.snt@gmail.com"){
-    //toast.success(`${session.user.name}, Você não tem permissão para acessar esta página!`);
+  if (!authorizedEmails.includes(String(session?.user?.email))) {
+    // toast.success(`${session.user.name}, Você não tem permissão para acessar esta página!`);
     return redirect("/");
   }
 

@@ -9,16 +9,8 @@ async function phoneSeedUpdate() {
   try {
     // Telefones a serem adicionados
     const phones = [
-      "11985219632",
-      "11876543210",
-      "11987654321",
-      "11765432109",
-      "11654321098",
-      "11543210987",
-      "11432109876",
-      "11321098765",
-      "11210987654",
-      "11098765432"
+      "17988077150",
+      "17997198151"
     ];
 
     const barbershops = await prisma.barbershop.findMany();
