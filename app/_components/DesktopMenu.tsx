@@ -111,7 +111,7 @@ const DesktopMenu = () => {
                   className="w-[134px] border border-input bg-background hover:bg-accent hover:text-accent-foreground"
                   asChild
                 >
-                  <Button variant="outline" onClick={handleLoginGithub}>
+                  {/* <Button variant="outline" onClick={handleLoginGithub}>
                     <svg
                       className="mr-2"
                       xmlns="http://www.w3.org/2000/svg"
@@ -125,7 +125,7 @@ const DesktopMenu = () => {
                       />
                     </svg>
                     Github
-                  </Button>
+                  </Button> */}
                 </AlertDialogAction>
               </AlertDialogFooter>
             </AlertDialogContent>

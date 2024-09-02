@@ -120,7 +120,7 @@ const SideMenu = () => {
                 Entrar
               </Button>
             </AlertDialogTrigger>
-            <AlertDialogContent className="flex flex-col items-center w-auto h-auto max-w-md overflow-y-auto">
+            <AlertDialogContent className="flex flex-col items-center w-[90%] sm:w-auto h-auto sm:max-w-md overflow-y-auto">
               <AlertDialogHeader>
                 <AlertDialogTitle className="text-center">
                   Faça login na plataforma
@@ -154,7 +154,7 @@ const SideMenu = () => {
                   className="w-[134px] border border-input bg-background hover:bg-accent hover:text-accent-foreground"
                   asChild
                 >
-                  <Button variant="outline" onClick={handleLoginGithub}>
+                  {/* <Button variant="outline" onClick={handleLoginGithub}>
                     <svg
                       className="mr-2"
                       xmlns="http://www.w3.org/2000/svg"
@@ -168,7 +168,7 @@ const SideMenu = () => {
                       />
                     </svg>
                     Github
-                  </Button>
+                  </Button> */}
                 </AlertDialogAction>
               </AlertDialogFooter>
             </AlertDialogContent>
