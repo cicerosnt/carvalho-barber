@@ -70,12 +70,21 @@ export default async function Home() {
             )}
           </div>
 
-          <div className="lg:w-[50%]">
+          {/* <div className="lg:w-[50%]">
             <BarbershopsCardGroup
               barbershops={barbershops}
-              title="Professionais"
+              title="Profissionais"
             />
-          </div>
+          </div> */}
+        </div>
+      </section>
+      
+      <section className="lg:px-32">
+        <div className="mb-[4.5rem]">
+          <BarbershopsCardGroup
+            barbershops={barbershops}
+            title="Profissionais"
+          />
         </div>
       </section>
 

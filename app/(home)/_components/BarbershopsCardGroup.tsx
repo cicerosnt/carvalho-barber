@@ -44,9 +44,17 @@ const BarbershopsCardGroup = ({
           <h2 className="mb-3 px-5 text-xs font-bold uppercase text-gray-400">
             {title}
           </h2>
+          
+          <div className="flex gap-4 overflow-x-auto px-5 [&::-webkit-scrollbar]:hidden">
+            {barbershops.map((barbershop: { id: Key | null | undefined }) => (
+              <div key={barbershop.id} className="max-w[221px] w-[221px]">
+                <BarbershopsCard barbershop={barbershop} />
+              </div>
+            ))}
+          </div>
 
-          <Carousel>
-            <CarouselContent className="-ml-4">
+          {/* <Carousel>
+            <CarouselContent className="ml-4">
               {barbershops.map((barbershop: { id: Key | null | undefined }) => (
                 <CarouselItem
                   key={barbershop.id}
@@ -60,7 +68,7 @@ const BarbershopsCardGroup = ({
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
-          </Carousel>
+          </Carousel> */}
         </div>
       )}
     </>
