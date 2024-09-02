@@ -178,10 +178,10 @@ const SideMenu = () => {
 
       <div className="flex flex-col gap-4 my-5 mx-3">
         <SheetClose asChild>
-        <Link href="/" className="flex gap-2 items-center">
-          <HomeIcon size={18} className="" />
-          Início
-        </Link>
+          <Link href="/" className="flex gap-2 items-center">
+            <HomeIcon size={18} className="" />
+            Início
+          </Link>
         </SheetClose>
 
         {data?.user && (

@@ -145,7 +145,7 @@ export const ServiceItem = ({
   return (
     <Card className="lg:w-[49%]">
       <CardContent className="w-full p-0 overflow-auto">
-        <div className="flex w-full items-center gap-2 p-2">
+        <div className="flex w-full items-center gap-2">
           <div className="relative max-h-[110px] min-h-[110px] min-w-[110px] max-w-[110px] p-0 m-0">
             <Image
               className="rounded-lg object-contain block"
@@ -252,7 +252,7 @@ export const ServiceItem = ({
                     </div>
                   )}
 
-                  <div className="border-t border-solid border-secondary py-3">
+                  <div className="border-t border-solid border-secondary py-3 ">
                     <BookingInfo
                       booking={{
                         barbershop: barbershop,

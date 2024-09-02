@@ -8,7 +8,29 @@ import { Metadata } from "next";
 import { authOptions } from "@/app/_lib/auth";
 
 export const metadata: Metadata = {
-  title: "Agendamentos",
+  title: "Agendamentos | Carvalho",
+  description: "Barbearia Carvalho, agende seu horário!",
+  keywords: ["cortar cabelo", "barbeiro", "barbearia", "barba"],
+  openGraph: {
+    title: "Carvalho | Agende seu horário",
+    description: "Barbearia Carvalho, agende seu horário!",
+    url: "https://seusite.com/gerenciamento",
+    images: [
+      {
+        url: "https://raw.githubusercontent.com/cicerosnt/carvalho-barber/main/public/carvalho-share.png",
+        width: 800,
+        height: 600,
+        alt: "Barbearia Carvalho, agende seu horário!",
+      },
+    ],
+  },
+  icons: {
+    icon: "favicon.png",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const BookingsPage = async () => {
@@ -62,11 +84,11 @@ const BookingsPage = async () => {
 
   return (
     <div className="lg:flex lg:w-full lg:justify-center lg:px-32">
-      <div className="px-2 py-6 lg:mb-10 lg:w-1/2">
+      <div className="px-5 py-6 lg:mb-10 lg:w-1/2">
         <div>
           <h1 className="mb-6 text-xl font-bold">Agendamentos</h1>
 
-          {confirmedBookings.length > 0 && (
+          {confirmedBookings.length > 0 ? (
             <>
               <h2 className="mb-3 text-sm font-bold uppercase text-gray-400">
                 Confirmados
@@ -79,6 +101,12 @@ const BookingsPage = async () => {
                 )}
               </div>
             </>
+          ):(
+            <div className="mt-5 border-2 border-dashed rounded-lg border-zinc-400 border-spacing-4 p-6 bg-zinc-800 ">
+              <p className="text-sm text-zinc-300">
+                Seus agendamentos serão exibidos aqui!
+              </p>
+            </div>
           )}
         </div>
 

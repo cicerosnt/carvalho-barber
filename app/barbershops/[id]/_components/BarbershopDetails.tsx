@@ -38,7 +38,7 @@ const BarbershopDetails = ({ barbershop }: BarbershopDetailsProps) => {
     <>
       {isMobile ? (
         <>
-          <div className="mb-6 border-b border-solid border-secondary px-5">
+          <div className="mb-6 border-b border-solid border-secondary">
             <h2 className="mb-3 text-xs font-bold uppercase text-gray-400">
               sobre nós
             </h2>
@@ -50,7 +50,7 @@ const BarbershopDetails = ({ barbershop }: BarbershopDetailsProps) => {
             </p>
           </div>
 
-          <div className="flex justify-between px-5">
+          <div className="flex justify-between">
             <ul className="flex flex-col gap-2">
               {weekDays.map((days) => (
                 <li key={days} className="text-sm text-gray-400">

@@ -24,7 +24,7 @@ const InfoToggler = ({ barbershop, session }: InfoTogglerProps) => {
 
   return (
     <>
-      <div className="px-2">
+      <div className="px-5">
         {isMobile ? (
           <>
             <div className="mt-6 flex gap-3">

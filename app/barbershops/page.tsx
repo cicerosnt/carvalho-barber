@@ -23,6 +23,7 @@ const BarberShopsPage = async ({ searchParams }: BarberShopsPageProps) => {
     },
     include: {
       phones: true,
+      services: true
     },
   });
 

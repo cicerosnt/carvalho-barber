@@ -23,7 +23,7 @@ export const BarbershopsCard = ({ barbershop }: BarbershopCardProps) => {
     <Card className="min-w-full max-w-full rounded-2xl cursor-pointer" onClick={handleBookingClick}>
       <CardContent className="px-1 py-0 pt-1">
         <div className="relative h-[159px] w-full">
-          <div className="absolute left-2 top-2 z-50">
+          {/* <div className="absolute left-2 top-2 z-50">
             <Badge
               variant="secondary"
               className="left-3 top-3 z-50 flex items-center gap-1 opacity-90"
@@ -31,7 +31,7 @@ export const BarbershopsCard = ({ barbershop }: BarbershopCardProps) => {
               <StarIcon size={12} className="fill-primary text-primary" />
               <span className="text-xs">5,0</span>
             </Badge>
-          </div>
+          </div> */}
           <Image
             alt={barbershop.name}
             src={barbershop.imageUrl}

@@ -18,7 +18,7 @@ import { useRouter } from "next/navigation";
 const formSchema = z.object({
   search: z
     .string({ required_error: "Campo obrigatório." })
-    .min(1, "Campo obrigatório.")
+    .min(2, "Campo mais .")
     .trim(),
 });
 
@@ -49,9 +49,9 @@ export const Search = ({ defaultValues }: SearchProps) => {
             control={form.control}
             name="search"
             render={({ field }) => (
-              <FormItem className="lg:w-[100%]">
+              <FormItem className="lg:w-[100%] flex-1">
                 <FormControl>
-                  <Input placeholder="Busque por uma barbearia..." {...field} />
+                  <Input placeholder="Digite o serviço que deseja" {...field} />
                 </FormControl>
 
                 <FormMessage />

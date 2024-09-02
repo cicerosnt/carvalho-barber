@@ -54,28 +54,36 @@ export default async function Home() {
                 })}
               </p>
             </div>
-
-            <div className="mt-6 px-5">
+            
+            {/* <div className="mt-6 px-5">
               <Search />
-            </div>
+            </div> */}
 
-            <ConfirmedBookings bookings={confirmedBookings} />
+            {confirmedBookings.length > 0 ?(
+              <ConfirmedBookings bookings={confirmedBookings} />
+            ):(
+              <div className="mt-5 mx-5 border-2 border-dashed rounded-lg border-zinc-400 border-spacing-4 p-6 bg-zinc-800 ">
+                <p className="text-sm text-zinc-300">
+                  Seus agendamentos serão exibidos aqui!
+                </p>
+              </div>
+            )}
           </div>
 
           <div className="lg:w-[50%]">
             <BarbershopsCardGroup
               barbershops={barbershops}
-              title="Recomendados"
+              title="Professionais"
             />
           </div>
         </div>
       </section>
 
-      <section className="lg:px-32">
+      {/* <section className="lg:px-32">
         <div className="mb-[4.5rem]">
           <ExtraCardGroup barbershops={barbershops} />
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
