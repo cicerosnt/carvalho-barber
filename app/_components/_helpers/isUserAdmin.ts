@@ -6,7 +6,8 @@ const isAdmin = async () => {
   
   const authorizedEmails = [
     "cdsantos.snt@gmail.com",
-    "pedromendesv96@gmail.com"
+    "pedromendesv96@gmail.com",
+    "leodecarvalh@gmail.com"
   ];
   
   if (!authorizedEmails.includes(String(session?.user?.email))) {
