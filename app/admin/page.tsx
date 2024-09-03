@@ -42,15 +42,13 @@ const BookingsPage = async () => {
     return redirect("/");
   }
   
-  if (!isAdmin()) {
+  if (!(await isAdmin())) {
     return redirect("/");
   }
 
   const [confirmedBookings, finishedBookings] = await Promise.all([
     db.booking.findMany({
       where: {
-        userId: (session.user as any).id,
-        
         date: {
           gte: new Date(),
         },
@@ -63,7 +61,6 @@ const BookingsPage = async () => {
         barbershop: {
           include: {
             phones: true,
-            bookings: true,
           },
         },
       },
