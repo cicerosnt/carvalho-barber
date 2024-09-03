@@ -126,7 +126,7 @@ const SideMenu = () => {
                   Faça login na plataforma
                 </AlertDialogTitle>
                 <AlertDialogDescription>
-                  Conecte-se usando sua conta do Google ou Github.
+                  Conecte-se usando sua conta do Google.
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter className="mt-2 flex gap-2">

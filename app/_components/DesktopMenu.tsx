@@ -1,7 +1,7 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Avatar, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
-import { LogOutIcon, CalendarIcon, CircleUser } from "lucide-react";
+import { LogOutIcon, CalendarIcon, CircleUser, LogOut, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import {
   AlertDialog,
@@ -50,18 +50,25 @@ const DesktopMenu = () => {
             <AlertDialogContent className="flex w-[400px] flex-col items-center">
               <AlertDialogHeader>
                 <AlertDialogTitle className="text-center">
-                  Sair
+                  Sair da conta?
                 </AlertDialogTitle>
                 <AlertDialogDescription>
-                  Deseja sair da plataforma?
+                  Deseja mesmo desconectar seu usuário?
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
-                <AlertDialogCancel className="mr-2 w-[150px] uppercase">
-                  Cancelar
+                <AlertDialogCancel 
+                  className="mr-2 w-[150px] uppercase gap-2">
+                  <ArrowLeft size={18}/>
+                  Ficar
                 </AlertDialogCancel>
                 <AlertDialogAction className="w-[150px]" asChild>
-                  <Button variant="destructive" onClick={handleLogoutClick}>
+                  <Button 
+                    variant="ghost" 
+                    onClick={handleLogoutClick}
+                    className="flex gap-2"
+                  >
+                    <LogOut size={18} />
                     Sair
                   </Button>
                 </AlertDialogAction>
@@ -83,7 +90,7 @@ const DesktopMenu = () => {
                   Faça login na plataforma
                 </AlertDialogTitle>
                 <AlertDialogDescription>
-                  Conecte-se usando sua conta do Google ou Github.
+                  Conecte-se usando sua conta do Google.
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter className="mt-2">
