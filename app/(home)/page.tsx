@@ -13,7 +13,7 @@ export default async function Home() {
   const session = await getServerSession(authOptions);
 
   const [barbershops, confirmedBookings] = await Promise.all([
-    db.barbershop.findMany({}),
+    db.barbershop.findMany({orderBy: {name: "asc"}}),
     session?.user
       ? db.booking.findMany({
           where: {
