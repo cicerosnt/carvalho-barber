@@ -27,18 +27,18 @@ const BarbershopDetails = ({ barbershop }: BarbershopDetailsProps) => {
   const workTime = [
     "Fechado",
     "Fechado",
-    "00:09 - 17:00",
-    "00:09 - 17:00",
-    "00:09 - 17:00",
-    "00:09 - 17:00",
-    "00:09 - 17:00",
+    "09:00 - 17:00",
+    "09:00 - 17:00",
+    "09:00 - 17:00",
+    "09:00 - 17:00",
+    "09:00 - 17:00",
   ];
 
   return (
     <>
       {isMobile ? (
         <>
-          <div className="mb-6 border-b border-solid border-secondary">
+          <div className="mb-6 border-b border-solid border-secondary mr-5">
             <h2 className="mb-3 text-xs font-bold uppercase text-gray-400">
               sobre nós
             </h2>
@@ -50,7 +50,7 @@ const BarbershopDetails = ({ barbershop }: BarbershopDetailsProps) => {
             </p>
           </div>
 
-          <div className="flex justify-between">
+          <div className="flex justify-between mr-5">
             <ul className="flex flex-col gap-2">
               {weekDays.map((days) => (
                 <li key={days} className="text-sm text-gray-400">
@@ -71,10 +71,10 @@ const BarbershopDetails = ({ barbershop }: BarbershopDetailsProps) => {
       ) : (
         <>
           <Card className="mt-10">
-            <CardContent className="p-0">
-              <div className="px-5">
+            <CardContent className="pt-1">
+              <div className="">
                 <div className="relative mt-6 h-[180px] w-full">
-                  <Image src="/barbershop-map.png" fill alt={barbershop.name} />
+                  <Image src="/barbershop-map.png" fill alt={barbershop.name} className="rounded-sm" />
 
                   <div className="absolute bottom-4 left-0 w-full px-5">
                     <Card>
@@ -83,7 +83,7 @@ const BarbershopDetails = ({ barbershop }: BarbershopDetailsProps) => {
                           <AvatarImage src={barbershop.imageUrl} />
                         </Avatar>
 
-                        <div>
+                        <div className="overflow-hidden">
                           <h2 className="font-bold">{barbershop.name}</h2>
                           <h3 className="overflow-hidden text-ellipsis text-nowrap text-xs">
                             {barbershop.address}
@@ -116,7 +116,7 @@ const BarbershopDetails = ({ barbershop }: BarbershopDetailsProps) => {
                   )}
                 </div>
 
-                <div className="flex justify-between px-5 my-5">
+                <div className="flex justify-between mt-5">
                   <ul className="flex flex-col gap-2">
                     {weekDays.map((days) => (
                       <li key={days} className="text-sm text-gray-400">

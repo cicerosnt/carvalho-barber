@@ -175,7 +175,7 @@ export const BookingItem = ({ booking }: BookingItemProps) => {
             <SheetClose asChild>
               <Button  
                 variant="default"
-                className="flex gap-2 w-full"
+                className="flex gap-2 w-full text-zinc-800"
               >
                 <ArrowLeft size={18} />
                 Voltar
@@ -203,7 +203,7 @@ export const BookingItem = ({ booking }: BookingItemProps) => {
                   </AlertDialogDescription>
                 </AlertDialogHeader>
                 <AlertDialogFooter className="flex-row gap-3">
-                  <AlertDialogCancel className="mt-0 w-full bg-transparent">
+                  <AlertDialogCancel className="mt-0 w-full text-zinc-800 flex gap-2 items-center">
                     <ArrowLeft size={18} />
                     Voltar
                   </AlertDialogCancel>

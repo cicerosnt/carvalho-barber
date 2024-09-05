@@ -143,20 +143,20 @@ export const ServiceItem = ({
   const disabledDays = { dayOfWeek: [0, 1] };
 
   return (
-    <Card className="lg:w-[49%]">
-      <CardContent className="w-full p-0 overflow-auto">
+    <Card className="w-full lg:w-[49%]">
+      <CardContent className="w-full p-2">
         <div className="flex w-full items-center gap-2">
-          <div className="relative max-h-[110px] min-h-[110px] min-w-[110px] max-w-[110px] p-0 m-0">
+          <div className="relative max-h-[110px] min-h-[110px] min-w-[110px] max-w-[110px]">
             <Image
               className="rounded-lg object-contain block"
               src={service.imageUrl}
               fill
-              // style={{ objectFit: "contain" }}
+              //style={{ objectFit: "contain" }}
               alt={service.name}
             />
           </div>
 
-          <div className="flex w-full flex-col">
+          <div className="flex w-full flex-col ">
             <h2 className="font-bold text-sm">
               {service.name}
             </h2>
@@ -165,7 +165,7 @@ export const ServiceItem = ({
             </p>
 
             <div className="mt-2 flex items-center justify-between">
-              <p className="font-semibold text-sm text-primary">
+              <p className="font-semibold text-sm text-primary flex-1">
                 {Intl.NumberFormat("pt-BR", {
                   style: "currency",
                   currency: "BRL",
@@ -177,7 +177,7 @@ export const ServiceItem = ({
                     variant="default" 
                     onClick={handleBookingClick}
                     size="sm"
-                    className="flex gap-2 text-sm py-1"
+                    className="flex gap-2 text-sm py-1 text-zinc-800"
                   >
                   <CalendarPlus size={17} />
                     Reservar

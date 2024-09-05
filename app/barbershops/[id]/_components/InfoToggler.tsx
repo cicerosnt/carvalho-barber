@@ -24,14 +24,14 @@ const InfoToggler = ({ barbershop, session }: InfoTogglerProps) => {
 
   return (
     <>
-      <div className="px-5">
+      <div className="px-5 sm:px-0 sm:pl-5 ">
         {isMobile ? (
           <>
             <div className="mt-6 flex gap-3">
               <Button
                 onClick={handleClick}
                 variant={!openDetails ? "default" : "outline"}
-                className="flex gap-2"
+                className="flex gap-2 text-zinc-800"
               >
                 <ScissorsLineDashedIcon size={20} />
                 Serviços
@@ -39,18 +39,18 @@ const InfoToggler = ({ barbershop, session }: InfoTogglerProps) => {
               <Button
                 onClick={handleClick}
                 variant={openDetails ? "default" : "outline"}
-                className="flex gap-2"
+                className={`flex gap-2 ${openDetails ? "text-zinc-800" : "text-zinc-100"}`}
               >
                 <EyeIcon size={20} />
                 Informações
               </Button>
             </div>
             {openDetails ? (
-              <div className="mb-10 mt-6">
+              <div className="mb-10 mt-6 ">
                 <BarbershopDetails barbershop={barbershop} />
               </div>
             ) : (
-              <div className="mb-10 flex flex-col gap-3 py-6">
+              <div className="mb-10 flex flex-col gap-5 py-6 mr-5">
                 {barbershop.services.map(
                   (service: { id: Key | null | undefined }) => (
                     <ServiceItem
@@ -66,7 +66,7 @@ const InfoToggler = ({ barbershop, session }: InfoTogglerProps) => {
           </>
         ) : (
           <>
-            <div className="mb-10 flex flex-wrap gap-3 py-6 pl-36">
+            <div className="mb-10 flex flex-wrap gap-5 py-6 pl-32">
               {barbershop.services.map(
                 (service: { id: Key | null | undefined }) => (
                   <ServiceItem

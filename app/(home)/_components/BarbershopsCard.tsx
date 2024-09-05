@@ -53,7 +53,7 @@ export const BarbershopsCard = ({ barbershop }: BarbershopCardProps) => {
           </p>
           <Button
             variant="default"
-            className="mt-3 w-full flex gap-2 items-center"
+            className="mt-3 w-full flex gap-2 items-center text-zinc-800"
             onClick={handleBookingClick}
           >
             Reservar

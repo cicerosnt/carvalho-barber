@@ -87,7 +87,7 @@ const SideMenu = () => {
               </AlertDialogHeader>
               <AlertDialogFooter>
                 <AlertDialogCancel 
-                  className="mr-2 w-[150px] flex gap-2"
+                  className="mr-2 w-[150px] flex gap-2 text-zinc-800"
                 >
                   <ArrowLeft size={18}/>
                   Ficar
@@ -115,7 +115,7 @@ const SideMenu = () => {
 
           <AlertDialog>
             <AlertDialogTrigger asChild>
-              <Button variant="default" className="flex gap-2 w-full justify-center">
+              <Button variant="default" className="flex gap-2 w-full justify-center text-zinc-800">
                 <LogInIcon size={18} />
                 Entrar
               </Button>

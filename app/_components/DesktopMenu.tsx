@@ -58,7 +58,7 @@ const DesktopMenu = () => {
               </AlertDialogHeader>
               <AlertDialogFooter>
                 <AlertDialogCancel 
-                  className="mr-2 w-[150px] uppercase gap-2">
+                  className="mr-2 w-[150px] gap-2 text-zinc-800">
                   <ArrowLeft size={18}/>
                   Ficar
                 </AlertDialogCancel>
@@ -80,7 +80,7 @@ const DesktopMenu = () => {
         <div className="flex gap-3 px-5 py-6">
           <AlertDialog>
             <AlertDialogTrigger asChild>
-              <Button variant="default" className="w-full justify-start">
+              <Button variant="default" className="w-full justify-start text-zinc-800">
                 <CircleUser className="mr-2" size={18} /> Fazer login
               </Button>
             </AlertDialogTrigger>
