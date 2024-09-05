@@ -50,7 +50,7 @@ const InfoToggler = ({ barbershop, session }: InfoTogglerProps) => {
                 <BarbershopDetails barbershop={barbershop} />
               </div>
             ) : (
-              <div className="mb-10 flex flex-col gap-5 py-6 mr-5">
+              <div className="mb-10 flex flex-col gap-5 py-6 lg:mr-5">
                 {barbershop.services.map(
                   (service: { id: Key | null | undefined }) => (
                     <ServiceItem
