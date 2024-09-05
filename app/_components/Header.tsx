@@ -11,14 +11,19 @@ import DesktopMenu from "./DesktopMenu";
 import useIsMobile from "./_helpers/useIsMobile";
 
 export const Header = () => {
-  const isMobile = useIsMobile()
+  const isMobile = useIsMobile();
 
   return (
     <header className="mb-16 lg:mb-32">
-      <Card className="lg:px-32 fixed top-0 lef-0 right-0 min-w-full z-10 rounded-none">
+      <Card className="lef-0 fixed right-0 top-0 z-10 min-w-full rounded-none lg:px-32">
         <CardContent className="flex flex-row items-center justify-between p-5 ">
           <Link href="/">
-            <Image src="/carvalho-barber-logo.png" alt="Carvalho Barbearia" height={22} width={90} />
+            <Image
+              src="/carvalho-barber-logo.png"
+              alt="Carvalho Barbearia"
+              height={22}
+              width={80}
+            />
           </Link>
           {isMobile ? (
             <Sheet>
