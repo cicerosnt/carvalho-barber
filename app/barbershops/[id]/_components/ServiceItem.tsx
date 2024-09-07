@@ -236,12 +236,12 @@ export const ServiceItem = ({
                     <div className="flex gap-3 overflow-x-auto border-t border-solid border-secondary p-5 [&::-webkit-scrollbar]:hidden">
                       {timeList.length > 0 ? (
                         <>
-                          {timeList.map((time) => (
+                          {timeList.map((time, index) => (
                           <Button
                             onClick={() => handleHourClick(time)}
                             variant={hour === time ? "default" : "outline"}
                             className={hour === time ? "rounded-full text-zinc-800" : "rounded-full"}
-                            key={time}
+                            key={index}
                           >
                             {time}
                           </Button>

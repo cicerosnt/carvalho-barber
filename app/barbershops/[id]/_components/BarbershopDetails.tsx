@@ -52,16 +52,16 @@ const BarbershopDetails = ({ barbershop }: BarbershopDetailsProps) => {
 
           <div className="flex justify-between mr-5">
             <ul className="flex flex-col gap-2">
-              {weekDays.map((days) => (
-                <li key={days} className="text-sm text-gray-400">
+              {weekDays.map((days, index) => (
+                <li key={index} className="text-sm text-gray-400">
                   {days}
                 </li>
               ))}
             </ul>
 
             <ul className="flex flex-col gap-2">
-              {workTime.map((workTime) => (
-                <li key={workTime}>
+              {workTime.map((workTime, index) => (
+                <li key={index}>
                   <time className="flex flex-col text-sm">{workTime}</time>
                 </li>
               ))}
@@ -118,16 +118,16 @@ const BarbershopDetails = ({ barbershop }: BarbershopDetailsProps) => {
 
                 <div className="flex justify-between mt-5">
                   <ul className="flex flex-col gap-2">
-                    {weekDays.map((days) => (
-                      <li key={days} className="text-sm text-gray-400">
+                    {weekDays.map((days, index) => (
+                      <li key={index} className="text-sm text-gray-400">
                         {days}
                       </li>
                     ))}
                   </ul>
 
                   <ul className="flex flex-col gap-2">
-                    {workTime.map((workTime) => (
-                      <li key={workTime}>
+                    {workTime.map((workTime, index) => (
+                      <li key={index}>
                         <time className="flex flex-col text-sm">
                           {workTime}
                         </time>

@@ -2,7 +2,7 @@ import { getServerSession } from "next-auth";
 import { Header } from "../_components/Header";
 import { redirect } from "next/navigation";
 import { db } from "../_lib/prisma";
-import { BookingItem } from "../_components/BookingItem";
+import { BookingItemAdmin } from "../_components/BookingItemAdmin";
 import { Key } from "react";
 import { Metadata } from "next";
 import { authOptions } from "@/app/_lib/auth";
@@ -84,6 +84,7 @@ const BookingsPage = async () => {
             phones: true,
           },
         },
+        user: true,
       },
     }),
   ]);
@@ -102,7 +103,7 @@ const BookingsPage = async () => {
               <div className="flex flex-col gap-3">
                 {confirmedBookings.map(
                   (booking: { id: Key | null | undefined }) => (
-                    <BookingItem booking={booking} key={booking.id} />
+                    <BookingItemAdmin booking={booking} key={booking.id} />
                   ),
                 )}
               </div>
@@ -125,7 +126,7 @@ const BookingsPage = async () => {
               <div className="flex flex-col gap-3">
                 {finishedBookings.map(
                   (booking: { id: Key | null | undefined }) => (
-                    <BookingItem booking={booking} key={booking.id} />
+                    <BookingItemAdmin booking={booking} key={booking.id} />
                   ),
                 )}
               </div>

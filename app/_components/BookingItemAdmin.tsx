@@ -78,7 +78,10 @@ export const BookingItem = ({ booking }: BookingItemProps) => {
               </Badge>
               <div className="flex flex-col gap-1">
                 <p className="font-semibold">
-                  {booking.service.name}
+                    <strong>Cliente: </strong>{booking.user?.name}
+                </p>
+                <p className="font-semibold">
+                  <strong>Serviço: </strong> {booking.service.name}
                 </p>
 
                 <div className="flex items-center gap-2 mt-0 w-auto ">
