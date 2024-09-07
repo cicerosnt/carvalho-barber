@@ -121,7 +121,7 @@ export const ServiceItem = ({
       return [];
     }
 
-    return generateDayTimeList(date, data?.user?.email).filter((time) => {
+    return generateDayTimeList(date, barbershop.id).filter((time) => {
       const timeHour = Number(time.split(":")[0]);
       const timeMinutes = Number(time.split(":")[1]);
 

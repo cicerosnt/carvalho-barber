@@ -17,9 +17,9 @@ export function generateDayTimeList(date: Date, email: String | null | undefined
     while (nextAvailableTime < endTime) {
         if (isAfter(nextAvailableTime, currentTime)) {
             let formattedTime = format(nextAvailableTime, 'HH:mm');
-            if (email == "pedromendesv96@gmail.com" && !blockedTimesP.includes(formattedTime)) {
+            if (email == "6b32011b-d357-499b-ad4d-cf742ce4072e" && !blockedTimesP.includes(formattedTime)) { //pedro
                 timeList.push(formattedTime);  
-            }else if (email == "leodecarvalh@gmail.com" && !blockedTimesL.includes(formattedTime)) {
+            }else if (email == "67f2bf67-28f9-4685-99fe-624c637efc45" && !blockedTimesL.includes(formattedTime)) { //leo
                 timeList.push(formattedTime);  
             }else{
                 timeList.push(formattedTime);
