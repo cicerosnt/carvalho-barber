@@ -45,7 +45,7 @@ interface BookingItemProps {
   }>;
 }
 
-export const BookingItem = ({ booking }: BookingItemProps) => {
+export const BookingItemAdmin = ({ booking }: BookingItemProps) => {
   const [isDeleteLoading, setIsDeleteLoading] = useState(false);
 
   const isBookingConfirmed = isFuture(booking.date);
