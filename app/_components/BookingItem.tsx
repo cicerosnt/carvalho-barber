@@ -40,6 +40,7 @@ interface BookingItemProps {
     include: {
       service: true;
       barbershop: true;
+      user: true;
     };
   }>;
 }
@@ -76,20 +77,22 @@ export const BookingItem = ({ booking }: BookingItemProps) => {
                 {isBookingConfirmed ? "Confirmado" : "Finalizado"}
               </Badge>
               <div className="flex flex-col gap-1">
-                <h2 className="font-semibold">
-                  {booking.service.name}
-                </h2>
-  
-                <div className="flex items-center gap-2 mt-0 ">
-                  <Avatar className="h-6 w-6">
-                    <AvatarImage src={booking.barbershop.imageUrl} />
-  
+                <p className="font-semibold">
+                    <strong>Cliente: </strong>{booking.user.name}
+                </p>
+                <p className="font-semibold">
+                  <strong>Serviço: </strong> {booking.service.name}
+                </p>
+
+                <div className="flex items-center gap-2 mt-0 w-auto ">
+                  <strong>Com: </strong>
+                  <Avatar className="h-10 w-10">
+                    <AvatarImage src={booking.barbershop.imageUrl}  className="w-full"/>
                     <AvatarFallback>A</AvatarFallback>
                   </Avatar>
-                  <h3 className="text-sm">
+                  <h3 className="font-semibold">
                     {booking.barbershop.name}
                   </h3>
-  
                 </div>
               </div>
             </div>

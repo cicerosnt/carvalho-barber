@@ -121,7 +121,7 @@ export const ServiceItem = ({
       return [];
     }
 
-    return generateDayTimeList(date).filter((time) => {
+    return generateDayTimeList(date, data?.user?.email).filter((time) => {
       const timeHour = Number(time.split(":")[0]);
       const timeMinutes = Number(time.split(":")[1]);
 
@@ -199,6 +199,7 @@ export const ServiceItem = ({
 
                   <div className="py-5">
                     <Calendar
+                      className="selection:text-red"
                       mode="single"
                       selected={date}
                       onSelect={handleDateClick}
@@ -239,7 +240,7 @@ export const ServiceItem = ({
                           <Button
                             onClick={() => handleHourClick(time)}
                             variant={hour === time ? "default" : "outline"}
-                            className="rounded-full"
+                            className={hour === time ? "rounded-full text-zinc-800" : "rounded-full"}
                             key={time}
                           >
                             {time}
@@ -272,7 +273,7 @@ export const ServiceItem = ({
                     <Button
                       onClick={handleBookingSubmit}
                       disabled={!hour || !date || submitIsLoading}
-                      className="flex gap-2"
+                      className="w-full flex gap-2 text-zinc-800"
                     >
                       {submitIsLoading && (
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />

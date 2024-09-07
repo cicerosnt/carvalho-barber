@@ -63,6 +63,7 @@ const BookingsPage = async () => {
             phones: true,
           },
         },
+        user: true,
       },
     }),
 

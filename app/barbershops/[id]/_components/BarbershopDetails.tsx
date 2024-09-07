@@ -27,11 +27,11 @@ const BarbershopDetails = ({ barbershop }: BarbershopDetailsProps) => {
   const workTime = [
     "Fechado",
     "Fechado",
-    "09:00 - 17:00",
-    "09:00 - 17:00",
-    "09:00 - 17:00",
-    "09:00 - 17:00",
-    "09:00 - 17:00",
+    "09:00 - 19:00",
+    "09:00 - 19:00",
+    "09:00 - 19:00",
+    "09:00 - 19:00",
+    "09:00 - 19:00",
   ];
 
   return (

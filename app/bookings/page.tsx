@@ -73,6 +73,7 @@ const BookingsPage = async () => {
       },
       include: {
         service: true,
+        user: true,
         barbershop: {
           include: {
             phones: true,
