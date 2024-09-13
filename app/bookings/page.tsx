@@ -9,23 +9,23 @@ import { authOptions } from "@/app/_lib/auth";
 
 export const metadata: Metadata = {
   title: "Agendamentos | Carvalho",
-  description: "Barbearia Carvalho, agende seu horário!",
+  description: "Barbearia Carvalho | Agende seu atendimento personalizado.",
   keywords: ["cortar cabelo", "barbeiro", "barbearia", "barba"],
   openGraph: {
-    title: "Carvalho | Agende seu horário",
-    description: "Barbearia Carvalho, agende seu horário!",
-    url: "https://seusite.com/gerenciamento",
+    title: "Barbearia Carvalho | Agende o seu horário",
+    description: "Barbearia Carvalho | Agende seu atendimento personalizado.",
+    url: "https://www.carvalhobarbearia.com",
     images: [
       {
         url: "https://raw.githubusercontent.com/cicerosnt/carvalho-barber/main/public/carvalho-share.png",
         width: 800,
         height: 600,
-        alt: "Barbearia Carvalho, agende seu horário!",
+        alt: "Barbearia Carvalho | Agende seu atendimento personalizado.",
       },
     ],
   },
   icons: {
-    icon: "favicon.png",
+    icon: "/favicon.png",
   },
   robots: {
     index: true,
@@ -102,8 +102,8 @@ const BookingsPage = async () => {
                 )}
               </div>
             </>
-          ):(
-            <div className="mt-5 border-2 border-dashed rounded-lg border-zinc-400 border-spacing-4 p-6 bg-zinc-800 ">
+          ) : (
+            <div className="mt-5 border-spacing-4 rounded-lg border-2 border-dashed border-zinc-400 bg-zinc-800 p-6 ">
               <p className="text-sm text-zinc-300">
                 Seus agendamentos serão exibidos aqui!
               </p>

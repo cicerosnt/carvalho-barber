@@ -1,32 +1,32 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import { Footer } from './_components/Footer'
-import AuthProvider from './_providers/auth'
-import { Toaster } from './_components/ui/sonner'
-import { Header } from './_components/Header'
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { Footer } from "./_components/Footer";
+import AuthProvider from "./_providers/auth";
+import { Toaster } from "./_components/ui/sonner";
+import { Header } from "./_components/Header";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Carvalho | Agende seu horário",
-  description: "Barbearia Carvalho, agende seu horário!",
+  title: "Barbearia Carvalho | Agende o seu horário",
+  description: "Barbearia Carvalho | Agende seu atendimento personalizado.",
   keywords: ["cortar cabelo", "barbeiro", "barbearia", "barba"],
   openGraph: {
-    title: "Carvalho | Agende seu horário",
-    description: "Barbearia Carvalho, agende seu horário!",
-    url: "https://seusite.com/gerenciamento",
+    title: "Barbearia Carvalho | Agende o seu horário",
+    description: "Barbearia Carvalho | Agende seu atendimento personalizado.",
+    url: "https://www.carvalhobarbearia.com",
     images: [
       {
         url: "https://raw.githubusercontent.com/cicerosnt/carvalho-barber/main/public/carvalho-share.png",
         width: 800,
         height: 600,
-        alt: "Barbearia Carvalho, agende seu horário!",
+        alt: "Barbearia Carvalho | Agende seu atendimento personalizado.",
       },
     ],
   },
   icons: {
-    icon: "favicon.png",
+    icon: "/favicon.png",
   },
   robots: {
     index: true,
@@ -34,29 +34,29 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode
+  children: React.ReactNode;
 }>) {
-	return (
-		<html lang="en" suppressHydrationWarning={true}>
-			<head>
-				<link rel="icon" href="/favicon.png" />
-			</head>
-			<body className={`${inter.className} dark`} suppressHydrationWarning={true}>
-				<AuthProvider>
-					<div className='flex-1'>
-						<Header />
-						<div className='mt-[75px]'>
-							{children}
-						</div>
-					</div>
-						<Footer />
-					<Toaster />
-				</AuthProvider>
-			</body>
-		</html>
-	)
+  return (
+    <html lang="en" suppressHydrationWarning={true}>
+      <head>
+        <link rel="icon" href="/favicon.png" />
+      </head>
+      <body
+        className={`${inter.className} dark`}
+        suppressHydrationWarning={true}
+      >
+        <AuthProvider>
+          <div className="flex-1">
+            <Header />
+            <div className="mt-[75px]">{children}</div>
+          </div>
+          <Footer />
+          <Toaster />
+        </AuthProvider>
+      </body>
+    </html>
+  );
 }

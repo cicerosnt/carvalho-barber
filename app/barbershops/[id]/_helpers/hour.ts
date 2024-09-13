@@ -14,18 +14,15 @@ export function generateDayTimeList(date: Date, userId: String): string[] {
     const blockedTimesMap: { [key: string]: string[] } = {
         "6b32011b-d357-499b-ad4d-cf742ce4072e": blockedTimesP, // Pedro
         "67f2bf67-28f9-4685-99fe-624c637efc45": blockedTimesL, // Leo
-      };
+    };
     
     while (nextAvailableTime < endTime) {
         if (isAfter(nextAvailableTime, currentTime)) {
-            let formattedTime = format(nextAvailableTime, 'HH:mm');
-            
+            let formattedTime = format(nextAvailableTime, 'HH:mm')
             if (!blockedTimesMap[userId as any]?.includes(formattedTime)) {
-                timeList.push(formattedTime);
+                timeList.push(formattedTime)
               }
-
             console.log(userId)
-            
         }
         nextAvailableTime = addMinutes(nextAvailableTime, interval);
     }

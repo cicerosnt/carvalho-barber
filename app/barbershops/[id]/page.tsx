@@ -7,24 +7,24 @@ import { redirect } from "next/navigation";
 import ResponsiveBarbershop from "./_components/ResponsiveBarbershop";
 
 export const metadata: Metadata = {
-  title: "Carvalho | Agende seu horário",
-  description: "Barbearia Carvalho, agende seu horário!",
+  title: "Barbearia Carvalho | Agende o seu horário",
+  description: "Barbearia Carvalho | Agende seu atendimento personalizado.",
   keywords: ["cortar cabelo", "barbeiro", "barbearia", "barba"],
   openGraph: {
-    title: "Carvalho | Agende seu horário",
-    description: "Barbearia Carvalho, agende seu horário!",
-    url: "https://seusite.com/gerenciamento",
+    title: "Barbearia Carvalho | Agende o seu horário",
+    description: "Barbearia Carvalho | Agende seu atendimento personalizado.",
+    url: "https://www.carvalhobarbearia.com",
     images: [
       {
         url: "https://raw.githubusercontent.com/cicerosnt/carvalho-barber/main/public/carvalho-share.png",
         width: 800,
         height: 600,
-        alt: "Barbearia Carvalho, agende seu horário!",
+        alt: "Barbearia Carvalho | Agende seu atendimento personalizado.",
       },
     ],
   },
   icons: {
-    icon: "favicon.png",
+    icon: "/favicon.png",
   },
   robots: {
     index: true,
@@ -49,7 +49,7 @@ const barbershopDetails = async ({ params }: BarbershopDetailsProps) => {
     },
     include: {
       services: true,
-      phones: true
+      phones: true,
     },
   });
 
