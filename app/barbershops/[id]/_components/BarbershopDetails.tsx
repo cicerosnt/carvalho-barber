@@ -31,7 +31,7 @@ const BarbershopDetails = ({ barbershop }: BarbershopDetailsProps) => {
     "09:00 - 19:00",
     "09:00 - 19:00",
     "09:00 - 19:00",
-    "09:00 - 19:00",
+    "09:00 - 16:00",
   ];
 
   return (
